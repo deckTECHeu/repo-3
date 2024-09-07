@@ -1,0 +1,14 @@
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args: 
+  - gcloud 
+  - functions
+  - deploy
+  - function_andy
+  - --region=us-central1
+  - --source=.
+  - --trigger-http
+  - --runtime=nodejs18
+  - --allow-unauthenticated  
+options:
+  logging: CLOUD_LOGGING_ONLY
